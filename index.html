@@ -71,12 +71,6 @@
     .tier .price { font-weight: 600; font-size: 14px; color: #fff; background: var(--accent); padding: 7px 12px; border-radius: 999px; white-space: nowrap; }
     .tier.monthly .price { background: var(--pink); }
     .note { text-align: center; color: var(--muted); font-size: 14px; margin: 24px 8px 0; }
-    .sponsor {
-      display: flex; justify-content: center; align-items: center; gap: 10px; margin: 24px auto 0; width: fit-content;
-      padding: 14px 22px; border-radius: 16px; font-weight: 600; color: #fff; text-decoration: none;
-      background: linear-gradient(135deg, #FF8FB1, var(--pink)); box-shadow: 0 12px 28px rgba(229,72,123,.35);
-    }
-    .sponsor:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
     section.more { padding: 24px; margin-top: 32px; }
     section.more h2 { font-size: 17px; margin: 0 0 12px; }
     section.more ul { margin: 0; padding-left: 20px; color: var(--muted); }
@@ -84,6 +78,10 @@
     footer { text-align: center; color: var(--faint); font-size: 13px; margin-top: 40px; }
     footer a { color: inherit; }
     .note.small { font-size: 12px; color: var(--faint); margin-top: 6px; }
+    .tier:hover { transform: none; box-shadow: 0 16px 40px var(--shadow); }
+    .how { padding: 20px 24px; margin-top: 16px; }
+    .how p { margin: 0; color: var(--muted); }
+    .how .how-title { color: var(--text); font-weight: 600; margin-bottom: 6px; }
     .thanks { font-weight: 500; color: var(--text); }
   </style>
 </head>
@@ -107,30 +105,28 @@
     </div>
 
     <div class="tiers">
-      <a class="glass tier" href="https://github.com/sponsors/GarbisT?frequency=one-time" target="_blank" rel="noopener">
-        <span class="icon" aria-hidden="true">☕</span><span class="name" data-i18n="coffee">A coffee for the team</span><span class="price">€3</span>
-      </a>
-      <a class="glass tier" href="https://github.com/sponsors/GarbisT?frequency=one-time" target="_blank" rel="noopener">
-        <span class="icon" aria-hidden="true">🛠</span><span class="name" data-i18n="servers">Cover a month of servers</span><span class="price">€10</span>
-      </a>
-      <a class="glass tier monthly" href="https://github.com/sponsors/GarbisT?frequency=recurring" target="_blank" rel="noopener">
-        <span class="icon" aria-hidden="true">💙</span><span class="name" data-i18n="monthly">Monthly supporter</span><span class="price" data-i18n="perMonth">€3 / month</span>
-      </a>
+      <div class="glass tier">
+        <span class="icon" aria-hidden="true">☕</span><span class="name" data-i18n="coffee">A coffee for the team</span><span class="price">€2.99</span>
+      </div>
+      <div class="glass tier">
+        <span class="icon" aria-hidden="true">🛠</span><span class="name" data-i18n="servers">Cover a month of servers</span><span class="price">€9.99</span>
+      </div>
+      <div class="glass tier monthly">
+        <span class="icon" aria-hidden="true">💙</span><span class="name" data-i18n="monthly">Monthly supporter</span><span class="price" data-i18n="perMonth">€2.99 / month</span>
+      </div>
     </div>
-
+    <div class="glass how">
+      <p class="how-title" data-i18n="howTitle">How to support</p>
+      <p data-i18n="how">In the CyShield app, open Settings and tap Support CyShield. Payment goes through the App Store or Google Play, in euros, with the card already on your phone. Monthly support can be cancelled at any time in your phone’s subscription settings.</p>
+      <!-- STORE_LINKS: add App Store / Google Play buttons here once the app is published. -->
+    </div>
     <p class="note" data-i18n="footnote">Optional. Nothing is unlocked and nothing changes, except our gratitude.</p>
-    <p class="note small" data-i18n="currency">GitHub Sponsors charges in US dollars; your bank converts the amount to euros.</p>
-
-    <a class="sponsor" href="https://github.com/sponsors/GarbisT" target="_blank" rel="noopener">
-      <span aria-hidden="true">♥</span><span data-i18n="cta">Support on GitHub Sponsors</span>
-    </a>
-
     <section class="glass more">
       <h2 data-i18n="moreTitle">Other ways to help</h2>
       <ul>
         <li data-i18n="more1">Tell friends and family about CyShield, especially people who might need it most.</li>
         <li data-i18n="more2">Report shelter problems in the app when a shelter is locked, closed or hard to find.</li>
-        <li data-i18n="more3">Organisations, municipalities and businesses interested in partnering or sponsoring can get in touch through GitHub.</li>
+        <li data-i18n="more3">Organisations, municipalities and businesses interested in partnering or sponsoring can write to <a href="mailto:boogieapps.help@gmail.com">boogieapps.help@gmail.com</a>.</li>
       </ul>
     </section>
 
@@ -149,14 +145,14 @@
         tagline: 'Ένας βοηθός ασφάλειας για την Κύπρο: καταφύγια, προειδοποιήσεις κινδύνου, κλήσεις έκτακτης ανάγκης και χάρτες χωρίς σύνδεση.',
         lead: 'Το CyShield είναι δωρεάν για όλους και θα παραμείνει. Χωρίς διαφημίσεις, χωρίς premium εκδόσεις, χωρίς συνδρομές.',
         body: 'Η λειτουργία του όμως κοστίζει: διακομιστές χαρτών, υπηρεσίες ειδοποιήσεων σε πραγματικό χρόνο και χρόνος για να παραμένουν ακριβή τα στοιχεία των καταφυγίων και ενημερωμένη η εφαρμογή. Αν το CyShield σάς έκανε να νιώσετε πιο ασφαλείς εσείς ή η οικογένειά σας, μπορείτε να βοηθήσετε να συνεχίσει να λειτουργεί για όλους στην Κύπρο.',
-        coffee: 'Ένας καφές για την ομάδα', servers: 'Ένας μήνας διακομιστών', monthly: 'Μηνιαίος υποστηρικτής', perMonth: '€3 / μήνα',
+        coffee: 'Ένας καφές για την ομάδα', servers: 'Ένας μήνας διακομιστών', monthly: 'Μηνιαίος υποστηρικτής', perMonth: '€2.99 / μήνα',
+        howTitle: 'Πώς να στηρίξετε',
+        how: 'Στην εφαρμογή CyShield ανοίξτε τις Ρυθμίσεις και πατήστε «Στηρίξτε το CyShield». Η πληρωμή γίνεται μέσω App Store ή Google Play, σε ευρώ, με την κάρτα που είναι ήδη στο τηλέφωνό σας. Τη μηνιαία στήριξη μπορείτε να την ακυρώσετε οποτεδήποτε από τις ρυθμίσεις συνδρομών του τηλεφώνου σας.',
         footnote: 'Προαιρετικό. Τίποτα δεν ξεκλειδώνει και τίποτα δεν αλλάζει, εκτός από την ευγνωμοσύνη μας.',
-        cta: 'Στήριξη μέσω GitHub Sponsors',
-        currency: 'Το GitHub Sponsors χρεώνει σε δολάρια ΗΠΑ· η τράπεζά σας μετατρέπει το ποσό σε ευρώ.',
         moreTitle: 'Άλλοι τρόποι να βοηθήσετε',
         more1: 'Πείτε για το CyShield σε φίλους και οικογένεια, ειδικά σε όσους το χρειάζονται περισσότερο.',
         more2: 'Αναφέρετε μέσα από την εφαρμογή καταφύγια που είναι κλειδωμένα, κλειστά ή δύσκολα να βρεθούν.',
-        more3: 'Οργανισμοί, δήμοι και επιχειρήσεις που ενδιαφέρονται για συνεργασία ή χορηγία μπορούν να επικοινωνήσουν μέσω GitHub.',
+        more3: 'Οργανισμοί, δήμοι και επιχειρήσεις που ενδιαφέρονται για συνεργασία ή χορηγία μπορούν να γράψουν στο <a href="mailto:boogieapps.help@gmail.com">boogieapps.help@gmail.com</a>.',
         thanks: 'Ευχαριστούμε. Βοηθάτε να μείνει το CyShield δωρεάν για όλους στην Κύπρο.',
         disclaimer: 'Το CyShield είναι ανεξάρτητη εφαρμογή και όχι επίσημη κρατική υπηρεσία. Σε έκτακτη ανάγκη καλέστε 112.',
         termsLink: 'Όροι Χρήσης',
@@ -167,14 +163,14 @@
         tagline: 'Помощник по безопасности на Кипре: укрытия, предупреждения об опасности, экстренные вызовы и офлайн-карты.',
         lead: 'CyShield бесплатен для всех и таким останется. Без рекламы, без премиум-версий, без платного доступа.',
         body: 'Но его работа стоит денег: картографические серверы, сервисы оповещений в реальном времени и время, чтобы данные об укрытиях оставались точными, а приложение — актуальным. Если CyShield помог вам или вашей семье чувствовать себя спокойнее, вы можете помочь ему работать для всех на Кипре.',
-        coffee: 'Кофе для команды', servers: 'Месяц работы серверов', monthly: 'Ежемесячная поддержка', perMonth: '€3 / месяц',
+        coffee: 'Кофе для команды', servers: 'Месяц работы серверов', monthly: 'Ежемесячная поддержка', perMonth: '€2.99 / месяц',
+        howTitle: 'Как поддержать',
+        how: 'В приложении CyShield откройте «Настройки» и нажмите «Поддержать CyShield». Оплата проходит через App Store или Google Play, в евро, картой, которая уже есть на телефоне. Ежемесячную поддержку можно отменить в любой момент в настройках подписок телефона.',
         footnote: 'Необязательно. Ничего не открывается и ничего не меняется — кроме нашей благодарности.',
-        cta: 'Поддержать через GitHub Sponsors',
-        currency: 'GitHub Sponsors списывает оплату в долларах США; банк конвертирует сумму в евро.',
         moreTitle: 'Другие способы помочь',
         more1: 'Расскажите о CyShield друзьям и близким — особенно тем, кому он может понадобиться больше всего.',
         more2: 'Сообщайте в приложении об укрытиях, которые заперты, закрыты или которые трудно найти.',
-        more3: 'Организации, муниципалитеты и компании, заинтересованные в партнёрстве или спонсорстве, могут связаться через GitHub.',
+        more3: 'Организации, муниципалитеты и компании, заинтересованные в партнёрстве или спонсорстве, могут написать на <a href="mailto:boogieapps.help@gmail.com">boogieapps.help@gmail.com</a>.',
         thanks: 'Спасибо! Вы помогаете сохранить CyShield бесплатным для всех на Кипре.',
         disclaimer: 'CyShield — независимое приложение, а не официальная государственная служба. В экстренной ситуации звоните 112.',
         termsLink: 'Условия использования',
@@ -182,12 +178,13 @@
       },
     };
     const nodes = [...document.querySelectorAll('[data-i18n]')];
-    const english = Object.fromEntries(nodes.map((n) => [n.dataset.i18n, n.textContent]));
+    const english = Object.fromEntries(nodes.map((n) => [n.dataset.i18n, n.innerHTML]));
     const titles = { en: 'Support CyShield', el: 'Στηρίξτε το CyShield', ru: 'Поддержать CyShield' };
 
     function apply(lang) {
       const dict = lang === 'en' ? english : { ...english, ...strings[lang] };
-      nodes.forEach((n) => { n.textContent = dict[n.dataset.i18n]; });
+      // Strings are this page's own (some contain a mailto link), never user input.
+      nodes.forEach((n) => { n.innerHTML = dict[n.dataset.i18n]; });
       document.documentElement.lang = lang;
       document.title = titles[lang];
       document.querySelectorAll('.lang button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
