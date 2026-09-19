@@ -83,6 +83,8 @@
     .how p { margin: 0; color: var(--muted); }
     .how .how-title { color: var(--text); font-weight: 600; margin-bottom: 6px; }
     .thanks { font-weight: 500; color: var(--text); }
+    section.more .help { margin: 0; color: var(--muted); }
+    section.more .help + .help { margin-top: 10px; color: var(--text); }
   </style>
 </head>
 <body>
@@ -130,6 +132,11 @@
       </ul>
     </section>
 
+    <section class="glass more" id="help">
+      <h2 data-i18n="helpTitle">Help &amp; contact</h2>
+      <p class="help" data-i18n="help">Questions, problems with the app, a shelter that is wrong, or a request about your data: write to <a href="mailto:boogieapps.help@gmail.com">boogieapps.help@gmail.com</a>. We usually reply within a few days.</p>
+      <p class="help" data-i18n="helpEmergency"><strong>This email is not monitored for emergencies. In an emergency, call 112.</strong></p>
+    </section>
     <footer>
       <p class="thanks" data-i18n="thanks">Thank you. You’re helping keep CyShield free for everyone in Cyprus.</p>
       <p data-i18n="disclaimer">CyShield is an independent app, not an official government service. In an emergency, call 112.</p>
@@ -153,6 +160,9 @@
         more1: 'Πείτε για το CyShield σε φίλους και οικογένεια, ειδικά σε όσους το χρειάζονται περισσότερο.',
         more2: 'Αναφέρετε μέσα από την εφαρμογή καταφύγια που είναι κλειδωμένα, κλειστά ή δύσκολα να βρεθούν.',
         more3: 'Οργανισμοί, δήμοι και επιχειρήσεις που ενδιαφέρονται για συνεργασία ή χορηγία μπορούν να γράψουν στο <a href="mailto:boogieapps.help@gmail.com">boogieapps.help@gmail.com</a>.',
+        helpTitle: 'Βοήθεια &amp; επικοινωνία',
+        help: 'Ερωτήσεις, προβλήματα με την εφαρμογή, λάθος στοιχεία καταφυγίου ή αίτημα για τα δεδομένα σας: γράψτε στο <a href="mailto:boogieapps.help@gmail.com">boogieapps.help@gmail.com</a>. Συνήθως απαντάμε μέσα σε λίγες ημέρες.',
+        helpEmergency: '<strong>Αυτό το email δεν παρακολουθείται για επείγοντα. Σε έκτακτη ανάγκη, καλέστε το 112.</strong>',
         thanks: 'Ευχαριστούμε. Βοηθάτε να μείνει το CyShield δωρεάν για όλους στην Κύπρο.',
         disclaimer: 'Το CyShield είναι ανεξάρτητη εφαρμογή και όχι επίσημη κρατική υπηρεσία. Σε έκτακτη ανάγκη καλέστε 112.',
         termsLink: 'Όροι Χρήσης',
@@ -171,6 +181,9 @@
         more1: 'Расскажите о CyShield друзьям и близким — особенно тем, кому он может понадобиться больше всего.',
         more2: 'Сообщайте в приложении об укрытиях, которые заперты, закрыты или которые трудно найти.',
         more3: 'Организации, муниципалитеты и компании, заинтересованные в партнёрстве или спонсорстве, могут написать на <a href="mailto:boogieapps.help@gmail.com">boogieapps.help@gmail.com</a>.',
+        helpTitle: 'Помощь и контакты',
+        help: 'Вопросы, проблемы с приложением, неверные данные об укрытии или запрос о ваших данных: пишите на <a href="mailto:boogieapps.help@gmail.com">boogieapps.help@gmail.com</a>. Обычно мы отвечаем в течение нескольких дней.',
+        helpEmergency: '<strong>Этот адрес не предназначен для экстренных случаев. В экстренной ситуации звоните 112.</strong>',
         thanks: 'Спасибо! Вы помогаете сохранить CyShield бесплатным для всех на Кипре.',
         disclaimer: 'CyShield — независимое приложение, а не официальная государственная служба. В экстренной ситуации звоните 112.',
         termsLink: 'Условия использования',
