@@ -82,6 +82,15 @@
     .how { padding: 20px 24px; margin-top: 16px; }
     .how p { margin: 0; color: var(--muted); }
     .how .how-title { color: var(--text); font-weight: 600; margin-bottom: 6px; }
+    .stores { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    .store {
+      display: inline-flex; align-items: center; gap: 9px; text-decoration: none;
+      font-weight: 600; font-size: 15px; color: #fff; background: var(--accent);
+      padding: 11px 18px; border-radius: 999px; transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .store:hover { transform: translateY(-2px); box-shadow: 0 16px 34px var(--shadow); }
+    .store:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+    .store svg { width: 19px; height: 19px; fill: currentColor; flex: none; }
     .thanks { font-weight: 500; color: var(--text); }
     section.more .help { margin: 0; color: var(--muted); }
     section.more .help + .help { margin-top: 10px; color: var(--text); }
@@ -120,7 +129,13 @@
     <div class="glass how">
       <p class="how-title" data-i18n="howTitle">How to support</p>
       <p data-i18n="how">In the CyShield app, open Settings and tap Support CyShield. Payment goes through the App Store or Google Play, in euros, with the card already on your phone. Monthly support can be cancelled at any time in your phone’s subscription settings.</p>
-      <!-- STORE_LINKS: add App Store / Google Play buttons here once the app is published. -->
+      <div class="stores">
+        <a class="store" href="https://apps.apple.com/cy/app/cyshield/id6813671772">
+          <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+          <span data-i18n="appStore">Download on the App Store</span>
+        </a>
+      </div>
+      <!-- Google Play button goes here when the Android build ships. -->
     </div>
     <p class="note" data-i18n="footnote">Optional. Nothing is unlocked and nothing changes, except our gratitude.</p>
     <section class="glass more">
@@ -154,6 +169,7 @@
         body: 'Η λειτουργία του όμως κοστίζει: διακομιστές χαρτών, υπηρεσίες ειδοποιήσεων σε πραγματικό χρόνο και χρόνος για να παραμένουν ακριβή τα στοιχεία των καταφυγίων και ενημερωμένη η εφαρμογή. Αν το CyShield σάς έκανε να νιώσετε πιο ασφαλείς εσείς ή η οικογένειά σας, μπορείτε να βοηθήσετε να συνεχίσει να λειτουργεί για όλους στην Κύπρο.',
         coffee: 'Ένας καφές για την ομάδα', servers: 'Ένας μήνας διακομιστών', monthly: 'Μηνιαίος υποστηρικτής', perMonth: '€2.99 / μήνα',
         howTitle: 'Πώς να στηρίξετε',
+        appStore: 'Κατεβάστε το από το App Store',
         how: 'Στην εφαρμογή CyShield ανοίξτε τις Ρυθμίσεις και πατήστε «Στηρίξτε το CyShield». Η πληρωμή γίνεται μέσω App Store ή Google Play, σε ευρώ, με την κάρτα που είναι ήδη στο τηλέφωνό σας. Τη μηνιαία στήριξη μπορείτε να την ακυρώσετε οποτεδήποτε από τις ρυθμίσεις συνδρομών του τηλεφώνου σας.',
         footnote: 'Προαιρετικό. Τίποτα δεν ξεκλειδώνει και τίποτα δεν αλλάζει, εκτός από την ευγνωμοσύνη μας.',
         moreTitle: 'Άλλοι τρόποι να βοηθήσετε',
@@ -175,6 +191,7 @@
         body: 'Но его работа стоит денег: картографические серверы, сервисы оповещений в реальном времени и время, чтобы данные об укрытиях оставались точными, а приложение — актуальным. Если CyShield помог вам или вашей семье чувствовать себя спокойнее, вы можете помочь ему работать для всех на Кипре.',
         coffee: 'Кофе для команды', servers: 'Месяц работы серверов', monthly: 'Ежемесячная поддержка', perMonth: '€2.99 / месяц',
         howTitle: 'Как поддержать',
+        appStore: 'Загрузите в App Store',
         how: 'В приложении CyShield откройте «Настройки» и нажмите «Поддержать CyShield». Оплата проходит через App Store или Google Play, в евро, картой, которая уже есть на телефоне. Ежемесячную поддержку можно отменить в любой момент в настройках подписок телефона.',
         footnote: 'Необязательно. Ничего не открывается и ничего не меняется — кроме нашей благодарности.',
         moreTitle: 'Другие способы помочь',
